@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/semanticdesign.css">
+
+    <style>
+        :root {
+    --primary-color: #edf3f8;
+    --secondary-color: #edf5ef;
+    --tertiary-color: #0851d8;
+    --accent-color: #0ea0e4;
+    --background-color: #195fe0;
+    --highlight-color: #1ba2e0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--accent-color);
+}
+header {
+    background: var(--secondary-color);
+    color: var(--background-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background: var(--primary-color);
+    padding: 10px;
+}
+nav a {
+    color: var(--background-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+}
+
+/* main layout*/
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* responsive grid*/
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr ;
+    }
+}
+
+/* main content*/
+main {
+    background: var(--accent-color);
+    color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+aside {
+    background: var(--highlight-color);
+    color:var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background: var(--accent-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 0.01em;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+.dashboard-item:hover {
+    transform: scale(1.05);
+  }
+ 
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+        .menu a {
+            text-decoration: none;
+            color: black;
+        }
+        /* Link States */
+        a:link {
+            color: blue;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: green;
+        }
+</style>
+</head>
+<body>
+        <!-- Header Section -->
+        <header>
+            <h1> Welcome to My Web Design Blog </h1>
+            <p> Sharing knowledge about web design, HTML5, CSS, and JavaScript</p>
+        </header>
+    
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="index.html">Home</a>
+             <a href="Semantic-html.html">Semantic</a>
+            <a href="Dashboard-html.html">Dashboard</a>
+        </nav>
+
+        <div class="container">
+            <main>
+                <h2> Main Content</h2>
+                <p> This a example box for DSA </p>
+            </main>
+            <aside> 
+                <h2> Sidebar </h2>
+                <p> Additional content or links go here.</p>
+            </aside>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 My Blog. All rights reserved</p>
+          </footer>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Gallery.css">
+
+    <style>
+    :root {
+    --primary-color: #edeff5;
+    --secondary-color: #cfdaf1;
+    --tertiary-color: #cde0e2;
+    --accent-color: #0f9cee;
+    --background-color: #1e0cc4;
+    --highlight-color: #110fad;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(white);
+    color: var(--accent-color);
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1001; /* higher than nav if header goes on top */
+    background: var(--secondary-color);
+    color: var(--background-color);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+    
+nav {
+    position: sticky;
+    top: 60px; /* Adjust this value based on the height of your header */
+    z-index: 1000;
+    background: var(--primary-color);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: var(--background-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+}
+
+/* main layout*/
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* responsive grid*/
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr ;
+    }
+}
+
+/* main content*/
+main {
+    background: var(--background-color);
+    color: var(--accent-color);
+    padding: 20px;
+    border-radius: 8px;
+    
+}
+
+
+section {
+    flex: 2;
+    padding: 20px;
+    height: auto;
+    background: var(--background-color);
+    margin: 20px;
+    border-radius: 5px;
+}
+
+article {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+aside {
+    flex: 1;
+    background: var(--background-color);
+    color:var(--accent-color);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background: var(--accent-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 0.01em;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    position: static;
+    width: 100%;
+    bottom: 0;
+}
+
+.dashboard-item:hover {
+    transform: scale(1.05);
+  }
+ 
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+        .menu a {
+            text-decoration: none;
+            color: black;
+        }
+        /* Link States */
+        a:link {
+            color: blue;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:active {
+            color: green;
+        }
+        </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Gallery</h1>
+        <p>Pictures I would like to share with you!</p>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="index.html">Return To Homepage</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h2>Gallery</h2>
+        <div class="dashboard">
+            <!-- Image boxes -->
+            <div class="box">
+                <img src="pictures/judo1.jpg" alt="SAMPLE PICTURE" />
+                <p>SAMPLE PICTURE</p>
+                <p>Judo Olympics 2024.</p>
+            </div>
+            <div class="box">
+                <img src="pictures/judo2.jpg" alt="Image 2" />
+                <p>SAMPLE PICTURE</p>
+                <p>Judo Olympics 2024.</p>
+            </div>
+            <div class="box">
+                <img src="pictures/judo3.jpg" alt="Image 3" />
+                <p>SAMPLE PICTURE</p>
+                <p>Judo Olympics 2024.</p>
+            </div>
+            <div class="box">
+                <img src="pictures/judo4.jpg" alt="Image 4" />
+                <p>SAMPLE PICTURE</p>
+                <p>Judo Olympics 2024.</p>
+            </div>
+
+            <!-- Video placeholders using iframe for YouTube videos -->
+            <div class="box">
+                <iframe width="100%" height="auto" src="https://www.youtube.com/watch?v=Zy7bRVk5hP0&ab_channel=InternationalJudoFederation" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Top 20 Ippons - World Judo Tour 2019 </p>
+                <p>Watch the best ippons from the 2019 season. Which is your favourite?</p>
+            </div>
+            <div class="box">
+                <iframe width="100%" height="auto" src="https://www.youtube.com/watch?v=60Rf_KGlpU0&ab_channel=InternationalJudoFederation" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Judo Highlights - Judo For The World Paris 2018 </p>
+                <p>Welcome to judo for the world, which comes to you from the French capital Paris</p>
+            </div>
+            <div class="box">
+                <iframe width="100%" height="auto" src="https://youtu.be/Imnc1XKtRs4?si=ROg0NRzq0D4Ql-47" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>IJF World Judo Tour - Grand Slam, Prix, Masters & World Championships </p>
+                <p>Judo Trailer for the World Tour of Grand Slam Grand Slam, Prix, Masters, World Championships. Enjoy!</p>
+            </div>
+            <div class="box">
+                <iframe width="100%" height="auto" src="https://youtu.be/q8poKakC-zM?si=nuMUmkKL2wf6CzAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>JUDO Highlights - PARIS GRAND SLAM 15</p>
+                <p>This Iconic city is the host of one of the most exciting annual judo competitions and a key event in the international judo federation's world tour. The Paris JUDO Grand Slam.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Blog. All rights reserved</p>
+    </footer>
+</body>
+</html>
